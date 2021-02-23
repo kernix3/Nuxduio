@@ -4,7 +4,7 @@
 int main()
 {
     printf("-- Nuxduio --\n\n");
-    char* alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    char* mapping = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     char input[100];
     printf("> ");
     fgets(input, sizeof(input), stdin);
@@ -20,7 +20,7 @@ int main()
             counter ++;
             c = c << 1;
             if (counter == 6) {
-                printf("%c",alpha[mem]);
+                printf("%c",mapping[mem]);
                 mem = 0;
                 counter = 0;
             }
@@ -28,10 +28,10 @@ int main()
     }
     mem = mem << (6 - counter);
     if (strlen(input) % 3 == 1) {
-        printf("%c==", alpha[mem]);
+        printf("%c==", mapping[mem]);
     }
     if (strlen(input) % 3 == 2) {
-        printf("%c=", alpha[mem]);
+        printf("%c=", mapping[mem]);
     }
     printf("\n");
     return 0;
