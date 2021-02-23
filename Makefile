@@ -1,10 +1,10 @@
 build:
-        @gcc -S main.c -o etc/main.S
-        @gcc etc/main.S -o bin/main
+        @gcc -S nuxduio.c -o etc/nuxduio.S
+        @gcc etc/nuxduio.S -o bin/nuxduio
 run:
-        @./bin/main
+        @./bin/nuxduio
 clean:
-        @rm -r etc/main.S
-        @rm -r bin/main
+        @rm -r etc/nuxduio.S
+        @rm -r bin/nuxduio
 help:
         @cat README.txt
